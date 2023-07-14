@@ -115,9 +115,11 @@
             <!--        <b id="diff" name="diff">다른 답변 보기</b>-->
             <!--        <div class="empty"></div>-->
             <!---->
+            {% if request.user.profile.is_provider %}
             <a href="{% url 'dispatch:dispatch_post' %}"
                 ><img src="{% static 'plus.svg' %}" id="plus"
             /></a>
+            {% endif %}
             <footer>
                 <div class="footer">
                     <ul class="foot">
